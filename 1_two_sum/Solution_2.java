@@ -7,12 +7,11 @@ class Solution_2 {
         Map<Integer, Integer> map = new HashMap<>();
 
         for (int idx = 0; idx < nums.length; idx++) {
-            int diff = target - nums[idx];
-
             if (map.containsKey(nums[idx])) {
-                return new int[] { map.get(nums[idx]), idx };
+                return new int[]{map.get(nums[idx]), idx};
             }
 
+            int diff = target - nums[idx];
             map.put(diff, idx);
         }
 
